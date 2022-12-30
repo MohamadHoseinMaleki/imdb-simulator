@@ -30,13 +30,6 @@ package com.example.demo.moodel;/*
  *
  */
 
-/*
- * *
- * @version 1
- * @moh-m82
- * /
- *
- */
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
