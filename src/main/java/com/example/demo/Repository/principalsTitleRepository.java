@@ -8,7 +8,6 @@
 
 package com.example.demo.Repository;
 
-import com.example.demo.moodel.MoviesOrBasics;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
@@ -17,5 +16,9 @@ public interface principalsTitleRepository extends JpaRepository <principalsTitl
 
     Optional<principalsTitleRepository> findByIdTConst(String st);
     Optional<principalsTitleRepository> findByCategory(String st);
+    Optional<principalsTitleRepository> findByOrdering(String st);
+    Optional<principalsTitleRepository> findBynConst(String st);
     Optional<principalsTitleRepository> findByJob(String st);
+    Optional<principalsTitleRepository> findByCharacters(String st);
+
 }
