@@ -28,22 +28,22 @@ public class principalsController {
     }
 
     @GetMapping("getFindBOrdering")
-    public principalsTitleRepository getFindBOrdering (@RequestParam String st){
-        return principalsRepo.findByOrdering(st).orElse(null);
+    public principalsTitle getFindBOrdering (@RequestParam String st){
+        return (principalsTitle) principalsRepo.findByOrdering(st).orElse(null);
     }
 
     @GetMapping("getFindBynConst")
-    public principalsTitleRepository getFindBynConst (@RequestParam String st){
-        return principalsRepo.findBynConst(st).orElse(null);
+    public principalsTitle getFindBynConst (@RequestParam String st){
+        return (principalsTitle) principalsRepo.findBynConst(st).orElse(null);
     }
 
     @GetMapping("getFindByJob")
-    public principalsTitleRepository getFindByJob (@RequestParam String st){
-        return principalsRepo.findByJob(st).orElse(null);
+    public principalsTitle getFindByJob (@RequestParam String st){
+        return (principalsTitle) principalsRepo.findByJob(st).orElse(null);
     }
 
     @GetMapping("getFindByCharacters")
-    public principalsTitleRepository getFindByCharacters (@RequestParam String st){
-        return principalsRepo.findByCharacters(st).orElse(null);
+    public principalsTitle getFindByCharacters (@RequestParam String st){
+        return (principalsTitle) principalsRepo.findByCharacters(st).orElse(null);
     }
 }
