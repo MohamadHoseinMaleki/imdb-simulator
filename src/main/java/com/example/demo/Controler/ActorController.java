@@ -28,7 +28,6 @@ public class ActorController {
         return actorRepository.findByPrimaryName(getName).orElse(null);
     }
 
-
     @GetMapping("getBirthYear")
     public ActorOrBasicNames getBirthYear(@RequestParam Integer getBirthYear) throws Exceptions {
         return actorRepository.findBirthYear(getBirthYear).orElse(null);
