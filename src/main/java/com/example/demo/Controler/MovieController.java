@@ -33,10 +33,12 @@ public class MovieController {
         return movieRepository.findByMovieNum(movieNum).orElse(null);
     }
 
+
     @GetMapping("getId")
     public MoviesOrBasics findById (@RequestParam long movieId) throws Exceptions {
         return movieRepository.findById(movieId).orElse(null);
     }
+
 
     @GetMapping("getIsAdult")
     public MoviesOrBasics getIsAdult (@RequestParam int i) throws Exceptions {
@@ -52,5 +54,6 @@ public class MovieController {
     public MoviesOrBasics getEndYear (@RequestParam int endYear) throws Exceptions {
         return movieRepository.findendYear(endYear).orElse(null);
     }
+
    // MovieService moveiservice = new MovieService;
 }
