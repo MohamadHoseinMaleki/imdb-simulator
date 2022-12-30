@@ -1,9 +1,5 @@
 package com.example.demo;
 
-import com.example.demo.enumeration.Status;
-import com.example.demo.repo.ServerRepo;
-import io.swagger.v3.oas.models.servers.Server;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
