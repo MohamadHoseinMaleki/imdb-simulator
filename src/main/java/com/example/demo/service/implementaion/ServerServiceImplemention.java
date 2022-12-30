@@ -8,7 +8,7 @@
 
 package com.example.demo.service.implementaion;
 
-import com.example.demo.repo.ServerRepo;
+import com.example.demo.repo.Balancer.ServerRepo;
 import com.example.demo.service.ServerService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
