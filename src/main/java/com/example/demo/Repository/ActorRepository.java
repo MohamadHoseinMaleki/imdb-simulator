@@ -16,7 +16,9 @@ import java.util.Optional;
 public interface ActorRepository extends JpaRepository <ActorOrBasicNames, Long>{
 
     Optional<ActorOrBasicNames> findByIdnCost( int intiger );
-    Optional<ActorOrBasicNames> findByprimaryName( String st );
+    Optional<ActorOrBasicNames> findByPrimaryName( String st );
     Optional<ActorOrBasicNames> findByKnownForTitles( int intigger);
+    Optional<ActorOrBasicNames> findBirthYear(int intigger);
+    Optional<ActorOrBasicNames> findByDeathYear( int intigger);
 
 }
