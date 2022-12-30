@@ -59,7 +59,6 @@ public class ActorOrBasicNames {
     private int birthYear;
     private int deathYear;
 
-
     @ManyToOne
     @JoinColumn(name = "movie_id_t_const")
     private MoviesOrBasics movie;
