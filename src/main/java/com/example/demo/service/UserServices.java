@@ -17,12 +17,12 @@ import java.util.List;
 
 @Service
 public class UserServices {
-    List<User> user =new ArrayList<>();
+    List<User> user = new ArrayList<>();
 
-    public void login(LoginRequest loginRequest){
+    public void login(LoginRequest loginRequest) {
 
         //username sreach to data base
 
-loginRequest.getUserName().
+        loginRequest.getUserName().
     }
 }
