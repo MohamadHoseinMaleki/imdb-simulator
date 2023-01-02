@@ -52,7 +52,7 @@ import javax.persistence.Id;
 @RequiredArgsConstructor
 
 
-public class principalsTitle {
+public class PrincipalsTitle {
     //idTConst	ordering	nConst	category	job	characters
     @Id
     @GeneratedValue

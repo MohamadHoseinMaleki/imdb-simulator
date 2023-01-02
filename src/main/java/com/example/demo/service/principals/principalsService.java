@@ -8,5 +8,8 @@
 
 package com.example.demo.service.principals;
 
+import org.springframework.stereotype.Service;
+
+@Service
 public class principalsService {
 }
