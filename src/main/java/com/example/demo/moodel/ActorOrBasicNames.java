@@ -31,16 +31,16 @@ package com.example.demo.moodel;/*
  */
 
 
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.persistence.*;
 
 @Entity
-@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@ToString
 @Getter
-@RequiredArgsConstructor
+@Builder
 
 public class ActorOrBasicNames {
     //nConst	primaryName	birthYear	deathYear	primaryProfession	knownForTitles
@@ -51,14 +51,15 @@ public class ActorOrBasicNames {
     private String primaryName;
     private int birthYear;
     private int deathYear;
+    private int knownForTitles;
 
+    @Setter
     @ManyToOne
     @JoinColumn(name = "movie_id_t_const")
     private MoviesOrBasics movie;
-    @ManyToMany(mappedBy = "movie")
+   // @ManyToMany(mappedBy = "movie")
 
     private String primaryProfession;
     // relation of project
-    private int knownForTitles;
 
 }
