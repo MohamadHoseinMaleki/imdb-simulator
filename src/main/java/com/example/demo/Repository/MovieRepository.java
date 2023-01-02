@@ -9,9 +9,10 @@ package com.example.demo.Repository;/*
 import com.example.demo.moodel.MoviesOrBasics;
 import org.springframework.data.jpa.repository.JpaRepository;
 
+import java.util.List;
 import java.util.Optional;
 
-public interface movieRepository extends JpaRepository<MoviesOrBasics, Long> {
+public interface MovieRepository extends JpaRepository<MoviesOrBasics, Long> {
 
     Optional<MoviesOrBasics> findIsAdult(int i);
 
@@ -21,4 +22,6 @@ public interface movieRepository extends JpaRepository<MoviesOrBasics, Long> {
 
     Optional<MoviesOrBasics> findendYear(int endYear);
     Optional<MoviesOrBasics> findByMovieNum(String movieNum);
+
+    List<MoviesOrBasics> findAll(String movie);
 }
