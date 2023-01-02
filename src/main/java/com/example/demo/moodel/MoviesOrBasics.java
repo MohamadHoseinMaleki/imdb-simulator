@@ -31,15 +31,16 @@ package com.example.demo.moodel;/*
  */
 
 import java.util.Comparator;
+import java.util.List;
 import java.util.Optional;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import lombok.ToString;
+import org.aspectj.apache.bcel.classfile.Module;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Getter
 @Setter
@@ -59,6 +60,12 @@ public class MoviesOrBasics implements Comparable {
     private int endYear;
     private int runtimeMinutes;
     private String genres;
+    @ManyToOne
+    @JoinColumn(name = "movie_id_t_const")
+    MoviesOrBasics movie;
+    @OneToMany(mappedBy = "movie")
+    @ToString.Exclude
+    private List <MoviesOrBasics> movies;
 
 
     public Comparator<? super MoviesOrBasics> setEndYear(int endYear) {
