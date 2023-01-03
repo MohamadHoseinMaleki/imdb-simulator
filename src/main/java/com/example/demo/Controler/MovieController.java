@@ -12,10 +12,7 @@ import com.example.demo.Repository.MovieRepository;
 import com.example.demo.exception.Exceptions;
 import com.example.demo.moodel.MoviesOrBasics;
 import com.example.demo.service.Movei.service.MovieService;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -58,6 +55,18 @@ public class MovieController {
     public MoviesOrBasics getEndYear(@RequestParam int endYear) throws Exceptions {
         return movieRepository.findendYear(endYear).orElse(null);
     }
+
+    // in emtiazi way : have add movie
+    @PostMapping("/addMovies")
+    private MoviesOrBasics addMovie(@RequestBody MoviesOrBasics school) {
+        return movieService.addMovie(school);
+    }
+
+    @GetMapping("/schools/{id}/Actor")
+    private List<MoviesOrBasics> getStudents(@PathVariable Integer id) {
+        return movieService.getActor(id);
+    }
+
 
     // MovieService moveiservice = new MovieService;
 }
