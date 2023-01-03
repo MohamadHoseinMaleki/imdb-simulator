@@ -38,9 +38,11 @@ package com.example.demo.moodel;/*
  *
  */
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+import net.bytebuddy.implementation.bind.annotation.BindingPriority;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -50,6 +52,7 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @RequiredArgsConstructor
+@Builder
 
 
 public class PrincipalsTitle {
