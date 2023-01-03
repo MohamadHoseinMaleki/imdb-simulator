@@ -17,6 +17,6 @@ public class UserRepo {
     @JsonProperty(value = "family")
     private String sn;
     @JsonProperty(value = "User_id")
-    private Integer StudentId;
+    private Integer UserId;
 
 }
