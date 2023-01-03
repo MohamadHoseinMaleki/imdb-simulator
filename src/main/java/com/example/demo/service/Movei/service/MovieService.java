@@ -10,17 +10,27 @@ package com.example.demo.service.Movei.service;
 
 import com.example.demo.Repository.MovieRepository;
 import com.example.demo.moodel.MoviesOrBasics;
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.Collections;
 import java.util.List;
 @Service
+@AllArgsConstructor
 public class MovieService {
 
-    MovieRepository movieRepository;
+   final MovieRepository movieRepository;
 
     public List<MoviesOrBasics> get200Top(String movie) {
         return movieRepository .findAll(movie);
+    }
+
+    public MoviesOrBasics addMovie(MoviesOrBasics school) {
+        return movieRepository.save(school);
+    }
+
+    public List<MoviesOrBasics> getActor(long movieId) {
+        MoviesOrBasics movie = movieRepository.findById(movieId).orElseThrow();
+        return movie.getMovies();
     }
 
 //
