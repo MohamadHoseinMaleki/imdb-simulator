@@ -29,4 +29,7 @@ public class ActorCreationResponseDTO {
     private Integer known;
     @JsonProperty(value = "Actor_id")
     private Integer ActorId;
+
+    public ActorCreationResponseDTO(String nConst, int ordering, String job, String idTConst) {
+    }
 }
