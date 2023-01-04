@@ -29,31 +29,31 @@ public class MovieController {
     }
 
 
-    @GetMapping("getMovieNum")
-    public MoviesOrBasics moviesOrBasics(@RequestParam String movieNum) throws Exceptions {
-        return movieRepository.findByMovieNum(movieNum).orElse(null);
-    }
+//    @GetMapping("getMovieNum")
+//    public MoviesOrBasics moviesOrBasics(@RequestParam int movieId) throws Exceptions {
+//        return movieRepository.findById(movieId).orElse(null);
+//    }
 
 
     @GetMapping("getId")
-    public MoviesOrBasics findById(@RequestParam long movieId) throws Exceptions {
+    public MoviesOrBasics findById(@RequestParam int movieId) throws Exceptions {
         return movieRepository.findById(movieId).orElse(null);
     }
 
 
     @GetMapping("getIsAdult")
-    public MoviesOrBasics getIsAdult(@RequestParam int i) throws Exceptions {
-        return movieRepository.findIsAdult(i).orElse(null);
+    public List<MoviesOrBasics> getIsAdult(@RequestParam boolean i) throws Exceptions {
+        return movieRepository.findByIsAdult(i);
     }
 
     @GetMapping("getStartYear")
-    public MoviesOrBasics getStartYear(@RequestParam int startyear) throws Exceptions {
-        return movieRepository.findstartYear(startyear).orElse(null);
+    public List<MoviesOrBasics> getStartYear(@RequestParam int startyear) throws Exceptions {
+        return movieRepository.findByStartYear(startyear);
     }
 
     @GetMapping("getEndYear")
-    public MoviesOrBasics getEndYear(@RequestParam int endYear) throws Exceptions {
-        return movieRepository.findendYear(endYear).orElse(null);
+    public List<MoviesOrBasics> getEndYear(@RequestParam int endYear) throws Exceptions {
+        return movieRepository.findByEndYear(endYear);
     }
 
     // in emtiazi way : have add movie

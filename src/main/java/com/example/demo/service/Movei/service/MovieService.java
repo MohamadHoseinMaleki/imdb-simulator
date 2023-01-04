@@ -21,14 +21,14 @@ public class MovieService {
    final MovieRepository movieRepository;
 
     public List<MoviesOrBasics> get200Top(String movie) {
-        return movieRepository .findAll(movie);
+        return movieRepository .findAll();
     }
 
     public MoviesOrBasics addMovie(MoviesOrBasics school) {
         return movieRepository.save(school);
     }
 
-    public List<MoviesOrBasics> getActor(long movieId) {
+    public List<MoviesOrBasics> getActor(int movieId) {
         MoviesOrBasics movie = movieRepository.findById(movieId).orElseThrow();
         return movie.getMovies();
     }

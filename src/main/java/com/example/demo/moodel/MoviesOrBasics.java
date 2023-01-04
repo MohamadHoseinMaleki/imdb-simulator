@@ -55,7 +55,7 @@ public class MoviesOrBasics implements Comparable {
     private int idTConst;
     private String titleType;
     private String primaryTitle;
-    private int isAdult;
+    private Boolean isAdult;
     private int startYear;
     private int endYear;
     private int runtimeMinutes;
