@@ -52,9 +52,9 @@ import javax.persistence.Id;
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Builder
 
-public class RattingTitle {
+
+public class RatingTitle {
     //idTConst	averageRating	numVotes
     @Id
     @GeneratedValue
