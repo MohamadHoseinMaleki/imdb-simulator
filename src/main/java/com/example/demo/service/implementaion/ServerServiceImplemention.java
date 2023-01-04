@@ -37,9 +37,10 @@ public class ServerServiceImplemention implements ServerService {
 
     @Override
     public Server create(Server server) {
-        log.info("saving new server : {} ", server.getName());
-        server.setImageUrl(setServerImageUrl());
-        return serverRepo.save(server);
+        log.info("saving new server : {} ", server.getStateName());
+//        server.setImageUrl(setServerImageUrl());
+//        return serverRepo.save(server);
+        return null;
     }
 
     @Override
@@ -47,8 +48,8 @@ public class ServerServiceImplemention implements ServerService {
         log.info("Pinging server Ip : {} ", ipAddress);
         Server server = (Server) serverRepo.findByIpAddress(ipAddress);
         InetAddress address= InetAddress.getByName(ipAddress);
-        server.getStatus(address.isReachable(10000) ? SERVER_UP : SERVER_DOWN );
-        serverRepo.save(server);
+//        server.getStatus(address.isReachable(10000) ? SERVER_UP : SERVER_DOWN );
+//        serverRepo.save(server);
         return server;
     }
 
@@ -66,8 +67,8 @@ public class ServerServiceImplemention implements ServerService {
 
     @Override
     public Server update(Server server) {
-        log.info("Updating server  : {}" ,id);
-        return serverRepo.save(server);
+        log.info("Updating server  : {}" ,server.getStateName());
+        /*return serverRepo.save(server);*/return null;
     }
 
     @Override
