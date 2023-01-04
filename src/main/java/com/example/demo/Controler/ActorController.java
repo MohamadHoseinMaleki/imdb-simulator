@@ -14,32 +14,34 @@ import com.example.demo.moodel.ActorOrBasicNames;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.List;
+
 public class ActorController {
 
     ActorRepository actorRepository;
 
     @GetMapping("getIdnCost")
     public ActorOrBasicNames getActorId (@RequestParam Integer getIdnCost) throws Exceptions {
-        return actorRepository.findByIdnCost(getIdnCost).orElse(null);
+        return actorRepository.findById(getIdnCost).orElse(null);
     }
 
     @GetMapping("getPrimaryName")
-    public ActorOrBasicNames findPrimaryName (@RequestParam String getName) throws Exceptions {
-        return actorRepository.findByPrimaryName(getName).orElse(null);
+    public List<ActorRepository> findPrimaryName (@RequestParam String getName) throws Exceptions {
+        return actorRepository.findByPrimaryName(getName);
     }
 
     @GetMapping("getBirthYear")
-    public ActorOrBasicNames getBirthYear(@RequestParam Integer getBirthYear) throws Exceptions {
-        return actorRepository.findBirthYear(getBirthYear).orElse(null);
+    public List<ActorRepository> getBirthYear(@RequestParam Integer getBirthYear) throws Exceptions {
+        return actorRepository.findByBirthYear(getBirthYear);
     }
 
     @GetMapping("getDeathYear")
-    public ActorOrBasicNames getDeathYear(@RequestParam Integer getDeathYear) throws Exceptions {
-        return actorRepository.findByDeathYear(getDeathYear).orElse(null);
+    public List<ActorRepository> getDeathYear(@RequestParam Integer getDeathYear) throws Exceptions {
+        return actorRepository.findByDeathYear(getDeathYear);
     }
 
     @GetMapping("getKnownForTitles")
-    public ActorOrBasicNames getKnownForTitles(@RequestParam Integer getKnown) throws Exceptions {
-        return actorRepository.findByKnownForTitles(getKnown).orElse(null);
+    public List<ActorRepository> getKnownForTitles(@RequestParam Integer getKnown) throws Exceptions {
+        return actorRepository.findByKnownForTitles(getKnown);
     }
 }
