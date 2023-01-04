@@ -25,12 +25,12 @@ public class principalsService {
     final PrincipalsTitleRepository principalsRepo;
     final MovieRepository movieRepo;
 
-    @PostMapping("/principal")
-    public ActorCreationResponseDTO addPrinc(ActorCreationResponseDTO requestDTO) {
-        PrincipalsTitle principal = DtoToEntityConverter.convertToMovie(requestDTO);
-        MoviesOrBasics movie = movieRepo.findById(Long.valueOf(requestDTO.getActorId())).orElseThrow();
-        movie.setMovie(movie);
-        return EntityToDTOConverter.convertPrincipalToDTO((principal));
-    }
+//    @PostMapping("/principal")
+//    public ActorCreationResponseDTO addPrinc(ActorCreationResponseDTO requestDTO) {
+//        PrincipalsTitle principal = DtoToEntityConverter.convertToMovie(requestDTO);
+//        MoviesOrBasics movie = movieRepo.findById(Long.valueOf(requestDTO.getActorId())).orElseThrow();
+//        movie.setMovie(movie);
+//        return EntityToDTOConverter.convertPrincipalToDTO((principal));
+//    }
 
 }
