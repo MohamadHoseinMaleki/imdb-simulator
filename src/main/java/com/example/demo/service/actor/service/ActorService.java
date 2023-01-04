@@ -28,7 +28,7 @@ public class ActorService {
     @PostMapping("/actor")
     public ActorCreationResponseDTO addActor(ActorCreationResponseDTO requestDTO) {
         ActorOrBasicNames actor  = DtoToEntityConverter.convertToActor(requestDTO);
-        MoviesOrBasics movie = movieRepo.findById(Long.valueOf(requestDTO.getActorId())).orElseThrow();
+        MoviesOrBasics movie = movieRepo.findById(requestDTO.getActorId()).orElseThrow();
         actor .setMovie(movie);
         return EntityToDTOConverter.convertToDTO(actorRepo.save(actor));
     }

@@ -11,7 +11,8 @@ package com.example.demo.utill;
 import com.example.demo.dto.ActorCreationResponseDTO;
 import com.example.demo.moodel.ActorOrBasicNames;
 import com.example.demo.moodel.PrincipalsTitle;
-import com.example.demo.moodel.RattingTitle;
+import com.example.demo.moodel.RatingTitle;
+
 
 public class EntityToDTOConverter {
     public static ActorCreationResponseDTO convertToDTO(ActorOrBasicNames actor) {
@@ -22,7 +23,7 @@ public class EntityToDTOConverter {
         return new ActorCreationResponseDTO(principalsTitle.getNConst(),principalsTitle.getOrdering(),principalsTitle.getJob(),principalsTitle.getIdTConst());
     }
 
-    public static ActorCreationResponseDTO convertRatingToDTO(RattingTitle rattingTitle) {
+    public static ActorCreationResponseDTO convertRatingToDTO(RatingTitle rattingTitle) {
         return new ActorCreationResponseDTO(rattingTitle.getIdTConst(),rattingTitle.getNumVotes(),rattingTitle.getIdTConst(),rattingTitle.getIdTConst());
     }
 

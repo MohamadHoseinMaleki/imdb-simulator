@@ -11,7 +11,7 @@ package com.example.demo.utill;
 import com.example.demo.dto.ActorCreationResponseDTO;
 import com.example.demo.moodel.ActorOrBasicNames;
 import com.example.demo.moodel.PrincipalsTitle;
-import com.example.demo.moodel.RattingTitle;
+import com.example.demo.moodel.RatingTitle;
 
 
 public class DtoToEntityConverter {
@@ -19,11 +19,11 @@ public class DtoToEntityConverter {
         return ActorOrBasicNames.builder().primaryName(requestDTO.getName()).primaryName(requestDTO.getName()).build();
     }
 
-    public static PrincipalsTitle convertToMovie(ActorCreationResponseDTO requestDTO) {
-        return PrincipalsTitle.builder().nConst(requestDTO.getName()).idTConst(requestDTO.getName()).build();
-    }
-
-    public static RattingTitle convertRatingToMovie(ActorCreationResponseDTO requestDTO) {
-        return RattingTitle.builder().idTConst(requestDTO.getName()).idTConst(requestDTO.getName()).build();
-    }
+//    public static PrincipalsTitle convertToMovie(ActorCreationResponseDTO requestDTO) {
+//        return PrincipalsTitle.builder().nConst(requestDTO.getName()).idTConst(requestDTO.getName()).build();
+//    }
+//
+//    public static RatingTitle convertRatingToMovie(ActorCreationResponseDTO requestDTO) {
+//        return RatingTitle.builder().idTConst(requestDTO.getName()).idTConst(requestDTO.getName()).build();
+//    }
 }
