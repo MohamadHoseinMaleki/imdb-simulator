@@ -13,37 +13,39 @@ import com.example.demo.moodel.PrincipalsTitle;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Optional;
+
 public class PrincipalsController {
 
     PrincipalsTitleRepository principalsRepo ;
 
     @GetMapping("getIdConst")
-    public PrincipalsTitle getIdConst (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findByIdTConst(st).orElse(null);
+    public Optional<PrincipalsTitle> getIdConst (@RequestParam Integer integer){
+        return  principalsRepo.findById(integer);
     }
 
     @GetMapping("getCategory")
     public PrincipalsTitle getCategory (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findByCategory(st).orElse(null);
+        return (PrincipalsTitle) principalsRepo.findByCategory(st);
     }
 
     @GetMapping("getFindBOrdering")
-    public PrincipalsTitle getFindBOrdering (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findByOrdering(st).orElse(null);
+    public PrincipalsTitle getFindBOrdering (@RequestParam Integer integer){
+        return (PrincipalsTitle) principalsRepo.findByOrdering(integer);
     }
 
     @GetMapping("getFindBynConst")
     public PrincipalsTitle getFindBynConst (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findBynConst(st).orElse(null);
+        return (PrincipalsTitle) principalsRepo.findByNConst(st);
     }
 
     @GetMapping("getFindByJob")
     public PrincipalsTitle getFindByJob (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findByJob(st).orElse(null);
+        return (PrincipalsTitle) principalsRepo.findByJob(st);
     }
 
     @GetMapping("getFindByCharacters")
     public PrincipalsTitle getFindByCharacters (@RequestParam String st){
-        return (PrincipalsTitle) principalsRepo.findByCharacters(st).orElse(null);
+        return (PrincipalsTitle) principalsRepo.findByCharacters(st) ;
     }
 }
