@@ -63,7 +63,7 @@ public class MoviesOrBasics implements Comparable {
     @ManyToOne
     @JoinColumn(name = "movie_id_t_const")
     MoviesOrBasics movie;
-    @OneToMany(mappedBy = "movie")
+     @OneToMany(mappedBy= "movie")
     @ToString.Exclude
     private List <MoviesOrBasics> movies;
 
