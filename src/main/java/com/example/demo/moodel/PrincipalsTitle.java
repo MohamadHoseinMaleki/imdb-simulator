@@ -38,15 +38,10 @@ package com.example.demo.moodel;/*
  *
  */
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter
@@ -65,6 +60,7 @@ public class PrincipalsTitle {
     private String category;
     private String job;
     private String characters;
+
 
 }
 
