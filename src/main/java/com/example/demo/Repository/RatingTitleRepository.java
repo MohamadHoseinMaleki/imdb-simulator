@@ -8,13 +8,17 @@
 
 package com.example.demo.Repository;
 
+import com.example.demo.moodel.PrincipalsTitle;
 import com.example.demo.moodel.RatingTitle;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-import java.util.Date;
+import java.util.List;
 import java.util.Optional;
 
-public interface RatingTitleRepository {
-    Optional<RatingTitle> findByIdTConst(String st);
-    Optional<RatingTitle> findByAverageRating(Double doubl);
-    Optional<RatingTitle> findByNumVotes( int intger);
+public interface RatingTitleRepository extends JpaRepository<RatingTitle, Integer> {
+
+    List<RatingTitle>findByAverageRating(Integer integer);
+    //Optional<RatingTitle> findByAverageRating(Double doubl);
+   // Optional<RatingTitle> findByNumVotes( int intger);
+    List<RatingTitle>findByNumVotes(Integer integer);
 }
