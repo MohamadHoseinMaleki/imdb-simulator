@@ -26,7 +26,7 @@ public class RatingTitleController {
     }
 
     @GetMapping("getAverageRating")
-    public RatingTitle getAverageRating(@RequestParam Integer doubleNum){
+    public RatingTitle getAverageRating(@RequestParam Double doubleNum){
         return (RatingTitle) ratingRepo.findByAverageRating(doubleNum);
     }
 

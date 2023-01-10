@@ -17,7 +17,7 @@ import java.util.Optional;
 
 public interface RatingTitleRepository extends JpaRepository<RatingTitle, Integer> {
 
-    List<RatingTitle>findByAverageRating(Integer integer);
+    List<RatingTitle>findByAverageRating(Double averageRating);
     //Optional<RatingTitle> findByAverageRating(Double doubl);
    // Optional<RatingTitle> findByNumVotes( int intger);
     List<RatingTitle>findByNumVotes(Integer integer);
