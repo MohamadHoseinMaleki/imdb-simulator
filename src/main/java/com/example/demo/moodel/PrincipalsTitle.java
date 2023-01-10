@@ -61,6 +61,9 @@ public class PrincipalsTitle {
     private String job;
     private String characters;
 
+    @OneToOne(mappedBy= "movie")
+    @ToString.Exclude
+    MoviesOrBasics movie;
 
 }
 
