@@ -62,7 +62,7 @@ public class MovieController {
         return movieService.addMovie(school);
     }
 
-    @GetMapping("/schools/{id}/Actor")
+    @GetMapping("/Actor/{id}/Actor")
     private List<MoviesOrBasics> getStudents(@PathVariable Integer id) {
         return movieService.getActor(id);
     }
