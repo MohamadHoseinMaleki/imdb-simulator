@@ -3,7 +3,7 @@ The description of the project and the requirements document are in this link :
 
 https://drive.google.com/file/d/1Pq3kliV_DbBNRsjWh_GQH8llKv-Y76N_/view?usp=share_link
 
-The site simulator project IMDBI which I have written backend with Java and # Spring Boot framework, with the site's own database IMDBI for videos and user profiles and queuing system, etc. The project document has been completely written. From the project's capabilities, you can search for methods with different fields of movies and actors.
+The site simulator project IMDBI which I have written backend with Java and ** Spring Boot ** framework, with the site's own database IMDBI for videos and user profiles and queuing system, etc. The project document has been completely written. From the project's capabilities, you can search for methods with different fields of movies and actors.
 
 The inventory guide is in the same direction as the description
 given .
