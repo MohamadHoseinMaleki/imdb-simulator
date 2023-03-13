@@ -29,6 +29,7 @@ public class MovieController {
     }
 
 
+
 //    @GetMapping("getMovieNum")
 //    public MoviesOrBasics moviesOrBasics(@RequestParam int movieId) throws Exceptions {
 //        return movieRepository.findById(movieId).orElse(null);
@@ -62,7 +63,7 @@ public class MovieController {
         return movieService.addMovie(school);
     }
 
-    @GetMapping("/Actor/{id}/Actor")
+   // @GetMapping("/Actor/{id}/Actor")
     private List<MoviesOrBasics> getStudents(@PathVariable Integer id) {
         return movieService.getActor(id);
     }
